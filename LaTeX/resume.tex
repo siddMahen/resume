@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt]{article}
+
+% - Packages -
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{charter}
+\usepackage{array}
+\usepackage{xcolor}
+
+% - Dimensions -
+\voffset=-0.5in
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0.0in
+\textwidth=470pt
+\headheight=0.0in
+\headsep=0.0in
+
+% - Bookeeping -
+\pagenumbering{gobble}
+\pagestyle{empty}
+\urlstyle{same}
+
+% - Customization -
+\setlength{\parindent}{0pt}
+
+% - Commands -
+\definecolor{lgray}{gray}{0.0}
+\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand{\VRule}{\color{lgray}\vrule width 0.5pt}
+
+\newenvironment{cvcol}%
+{\begin{tabular}{L!{\VRule}R}}%
+{\end{tabular}}
+
+\newcommand{\cvsec}[2]{{\bf #1}&{\bf #2}\smallskip\\}
+\newcommand{\cvpar}[1]{&#1\\}
+\newcommand{\cvskip}{&\\}
+
+% - Cirriculum Vitae -
+\begin{document}
+
+% - Title -
+\centerline{\LARGE\bf Siddharth Mahendraker}
+\medskip
+
+% - Personal Info -
+\centerline{Mäenrinne 3-5 K 90, Espoo, Finland}
+\smallskip
+\centerline{+358 40 142 2010}
+\smallskip
+\centerline{\href{mailto:siddharth\_mahen@me.com}{\nolinkurl{siddharth\_mahen@me.com}}}
+\rule{\textwidth}{0.2pt}
+
+\section*{Education}
+\begin{cvcol}
+\cvsec{2010 -- now}{International School of Helsinki, Helsinki, Finland, Grades 9 - 11}
+\cvpar{Currently in the 11th grade. Graduated each previous year with honours.}
+\cvskip
+\cvsec{2006 -- 2010}{West Oak Public School, Oakville, Ontario, Canada, Grades 5 - 8}
+\cvpar{Graduated each year with honours. Valedictorian of the graduating class. Received the French award for excellence in the French language.}
+\end{cvcol}
+
+\end{document}
