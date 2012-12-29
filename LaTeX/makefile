@@ -8,6 +8,9 @@ build:
 	pdflatex $(DOC)
 
 clean:
-	rm $(DOC).{log dvi}
+	rm $(DOC).aux
+	rm $(DOC).dvi
+	rm $(DOC).log
+	rm $(DOC).out
 
 .PHONY: build render
