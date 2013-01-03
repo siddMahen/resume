@@ -17,16 +17,15 @@
 \headheight=0.0in
 \headsep=0.0in
 
-% - Bookeeping -
+% - Bookkeeping -
 \pagenumbering{gobble}
 \pagestyle{empty}
-%\urlstyle{same}
 
 % - Customization -
 \setlength{\parindent}{0pt}
 
 % - Commands -
-\definecolor{lgray}{gray}{0.2}
+\definecolor{lgray}{gray}{1.0}
 \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand{\VRule}{\color{lgray}\vrule width 0.5pt}
@@ -39,7 +38,7 @@
 \newcommand{\cvpar}[2][]{{\bf #1}&#2\\}
 \newcommand{\cvskip}{&\\}
 
-% - Cirriculum Vitae -
+% - Curriculum Vitae -
 \begin{document}
 
 % - Title -
@@ -51,7 +50,7 @@
 \smallskip
 \centerline{+358 40 142 2010}
 \smallskip
-\centerline{\href{mailto:siddharth\_mahen@me.com}{\nolinkurl{siddharth\_mahen@me.com}}}
+\centerline{\href{mailto:siddharth_mahen@me.com}{\url{siddharth_mahen@me.com}}}
 \rule{\textwidth}{0.2pt}
 
 \section*{Education}
@@ -67,53 +66,31 @@ Received the French award for excellence in the French language.}
 \section*{Work Experience}
 \begin{cvcol}
 \cvsec[2010 -- 2011]{Engineered an iPhone application used in production at iMenu360 Inc.}
-\cvpar{Was responsible for the planning, design, engineering and coding of an
-iPhone application for iMenu360. The application displayed incoming orders
+\cvpar{Was responsible for planning, designing, engineering and coding the
+application on behalf of iMenu360. The application displayed incoming orders
 for restaurant managers, allowing them to quickly understand an order
-issue, and quickly take corrective action. The application incorporated push
+issue and take corrective action. The application incorporated push
 notifications, XML parsing and custom gestures.}
 \end{cvcol}
 
 \section*{Interests}
 \begin{cvcol}
 \cvpar[Mathematics]{
-Highly interested and competant in many areas of mathematics, particularly
-discrete mathematics, abstract algebra and cryptography. Currently working
-through {\it Introduction to Abstract Algebra, D.S Malik et al.}. Spend a lot of
-my free time learning math and exploring different areas of the subject,
-particularly with respect to my endeavours in software engineering and
-computer science.}
+Particularly number theory, abstract algebra and cryptography. In the
+10\textsuperscript{th} grade, wrote a through report on modern cryptography,
+with an emphasis on the mathematical cryptanalysis of these techniques (available
+at \url{http://git.io/iAFH6A}).}
 \cvskip
-%TODO: Fix refs
 \cvpar[Theoretical and Applied Computer Science]{
-Highly interested in many problems in both theoretical and applied computer
-science, with particular interest in the theory of computation and the design
-and analysis of algorithms and data structures. Currently working through
-{\it Introduction to Algorithms, CLRS}, as well as {\it Algorithms: Design and Analysis,
-Pt 2, Roughgarden} via the online service Coursera.}
+Particularly the design and analysis of algorithms and data structures, and
+the theory of computation. Pioneered the computer science course at the
+International School of Helsinki.}
 \cvskip
 \cvpar[Open Source Software]{
 Regularly work on small open source projects in leisure time. Maintainer
 of two non-trivial open source projects. Has contributed minor patches to
 larger projects such as the node.js project. All code freely available under the
 MIT licence at \url{https://github.com/siddmahen}.}
-\end{cvcol}
-
-\section*{Achievements}
-\begin{cvcol}
-\cvpar[Volleyball]%
-{Won Bronze at the CEESA High School Boys Volleyball Tournament, 2012,
-Helsinki, Finland. Played as the team setter. Have been playing volleyball for
-over 4 years, competitively for the past 2 years.}
-\cvskip
-\cvpar[Model United Nations]%
-{Participated in 5 MUN conferences, including the original conference in the
-Hague, and other large conferences such as those in Paris and Milan. Held
-various high profile positions, including the head ambassador of high profile
-countries including Turkey and Japan, as well as positions in the Security
-Council, the Disarmament Committee and the International Court of Justice.
-Recognized at the Milan MUN for outstanding work in the Security Council.
-Spoke in front of the General Assembly at every conference.}
 \cvskip
 \cvpar[Music]%
 {Played 1\textsuperscript{st} flute in the West Oak School Band for 3 years.
@@ -122,15 +99,37 @@ band conductor. Continued to play flute in Helsinki, playing the solo flute scor
 for the school production of {\it The Wizard of Oz}.}
 \end{cvcol}
 
+\section*{Achievements}
+\begin{cvcol}
+\cvpar[Student Government]%
+{Elected vice-president of the High School Student Council. Have served on
+the Council in various capacities for the past 3 years. In charge of planning,
+organizing and running large school events such as school dances, cultural and
+seasonal events and fund raisers.}
+\cvskip
+\cvpar[Volleyball]%
+{Won Bronze at the CEESA High School Boys Volleyball Tournament, 2012,
+Helsinki, Finland. Played as the team setter. Have been playing volleyball for
+over 4 years, competitively for the past 2 years.}
+\cvskip
+\cvpar[Model United Nations]%
+{Participated in 5 MUN conferences, including conferences in the
+Hague, Paris and Milan. Held various high profile positions; head ambassador
+of high profile countries such as Turkey and Japan, member of the security Security
+Council, the Disarmament Committee and the International Court of Justice.
+Recognized at the Milan MUN for outstanding work in the Security Council.
+Spoke in front of the General Assembly at every conference.}
+\end{cvcol}
+
 \section*{Skills}
 \begin{cvcol}
-\cvpar[Languages]{Mother tongue English. Nearly native French}
+\cvpar[Languages]{Mother tongue English. Nearly native French.}
 \cvskip
 \cvpar[Programming Languages]{Fluent in Javascript and Objective-C. Can also
 write in C, Python, PHP and C++. Mild exposure to Haskell.}
 \cvskip
 \cvpar[Computer Skills]{Highly proficient in a wide variety of tools, including
-the shell, git, vim and Xcode.}
+the shell, git, vim and Xcode. This document was written in vim using {\large \LaTeX}.}
 \end{cvcol}
 
 \end{document}
