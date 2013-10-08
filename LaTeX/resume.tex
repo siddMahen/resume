@@ -1,143 +1,137 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{microtype}
-\usepackage{hyperref}
+
+\usepackage[%
+    top=1in,%
+    left=1.5in,%
+    right=1.5in,%
+    bottom=1.2in%
+]{geometry}
+
+\usepackage[defaultsans]{opensans}
 \usepackage{charter}
-\usepackage{xcolor}
-\usepackage{array}
-\usepackage{url}
+\usepackage{hyperref}
 
-% - Dimensions -
-\voffset=0.0in
-\topmargin=0.0in
-\oddsidemargin=0.0in
-\evensidemargin=0.0in
-\textwidth=450pt
-\textheight=800pt
-\headheight=0.0in
-\headsep=0.0in
-\footskip=0.0in
+\usepackage[%
+    tracking=true,%
+    letterspace=150,%
+    kerning=true,%
+    selected=true%
+]{microtype}
 
-% - Bookkeeping -
-\pagenumbering{gobble}
-\pagestyle{empty}
+\usepackage{titlesec}
 
-% - Customization -
-\setlength{\parindent}{0pt}
+\titleformat{\section}%
+{\scshape\normalsize\sffamily}{}{0pt}%
+{\rule{\textwidth}{0.5pt}\\}%
+{\bigskip}%
 
-% - Commands -
-\definecolor{lgray}{gray}{1.0}
-\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
-\newcolumntype{R}{p{0.8\textwidth}}
-\newcommand{\VRule}{\color{lgray}\vrule width 0.5pt}
+% -- Convenience --
+\newcommand{\hdr}[2]{{\raggedright\Large #1 \hfill #2}}
+\newcommand{\itm}{\item[--]}
 
-\newenvironment{cvcol}%
-{\begin{tabular}{L!{\VRule}R}}%
-{\end{tabular}}
-
-\newcommand{\cvsec}[2][]{{\bf #1}&{\bf #2}\smallskip\\}
-\newcommand{\cvpar}[2][]{{\bf #1}&#2\\}
-\newcommand{\cvskip}{&\\}
-
-% - Curriculum Vitae -
 \begin{document}
 
-% - Title -
-\centerline{\LARGE\bf Siddharth Mahendraker}
+% -- Mast --
+\begin{center}
+\begin{scshape}
+{\huge\sffamily Siddharth Mahendraker}\\
+\bigskip
+\textsf{Mäenrinne 3-5 K 90, Espoo, 02160, Finland}\\
 \medskip
+\textsf{(+358) 40 142 2010 – siddharth.mahen@gmail.com}
+\end{scshape}
+\end{center}
 
-% - Personal Info -
-\centerline{Mäenrinne 3-5 K 90, Espoo, Finland}
-\smallskip
-\centerline{+358 40 142 2010}
-\smallskip
-\centerline{\href{mailto:siddharth_mahen@me.com}{\url{siddharth_mahen@me.com}}}
-\rule{\textwidth}{0.2pt}
-
-\section*{Objective}
-I'm a young, focused and talented student looking for a challenging job
-opportunity where I can apply my knowledge of mathematics and computer
-science.
-
-\section*{Education}
-\begin{cvcol}
-\cvsec[2010 -- now]{International School of Helsinki, Helsinki, Finland, Grades 9 - 11}
-\cvpar{Currently in the 11th grade. Graduated each previous year with honours.}
-\cvskip
-\cvsec[2006 -- 2010]{West Oak Public School, Oakville, Ontario, Canada, Grades 5 - 8}
-\cvpar{Graduated each year with honours. Valedictorian of the graduating class.
-Received the French award for excellence in the French language.}
-\end{cvcol}
-
-\section*{Work Experience}
-\begin{cvcol}
-\cvsec[2010 -- 2011]{Engineered an iPhone application used in production at iMenu360 Inc.}
-\cvpar{Was responsible for planning, designing, engineering and coding the
-application on behalf of iMenu360. The application displayed incoming orders
-for restaurant managers, allowing them to quickly understand an order
-issue and take corrective action. The application incorporated push
-notifications, XML parsing and custom gestures.}
-\end{cvcol}
-
-\section*{Interests}
-\begin{cvcol}
-\cvpar[Mathematics]{
-Particularly number theory, abstract algebra and cryptography. In the
-10\textsuperscript{th} grade, wrote a through report on modern cryptography,
-with an emphasis on the mathematical cryptanalysis of these techniques (available
-at \url{http://git.io/iAFH6A}).}
-\cvskip
-\cvpar[Theoretical and Applied Computer Science]{
-Particularly the design and analysis of algorithms and data structures, and
-the theory of computation. Pioneered the computer science course at the
-International School of Helsinki.}
-\cvskip
-\cvpar[Open Source Software]{
-Regularly work on small open source projects in leisure time. Maintainer
-of two non-trivial open source projects. Has contributed minor patches to
-larger projects such as the node.js project. All code freely available under the
-MIT licence at \url{https://github.com/siddmahen}.}
-\cvskip
-\cvpar[Music]%
-{Played 1\textsuperscript{st} flute in the West Oak School Band for 3 years.
-Invited to play in the Halton Intermediate Woodwinds Band by recommendation from the
-band conductor. Continued to play flute in Helsinki, playing the solo flute score
-for the school production of {\it The Wizard of Oz} in 2011.}
-\end{cvcol}
-
-\section*{Achievements}
-\begin{cvcol}
-\cvpar[Student Government]%
-{Elected vice-president of the High School Student Council. Have served on
-the Council in various capacities for the past 3 years. In charge of planning,
-organizing and running large school events such as school dances, cultural and
-seasonal events and fund raisers.}
-\cvskip
-\cvpar[Volleyball]%
-{Won Bronze at the CEESA High School Boys Volleyball Tournament, 2012,
-Helsinki, Finland. Played as the team setter. Have been playing volleyball for
-over 4 years, competitively for the past 2 years.}
-\cvskip
-\cvpar[Model United Nations]%
-{Participated in 5 MUN conferences, including conferences in the
-Hague, Paris and Milan. Held various high profile positions; head ambassador
-of high profile countries such as Turkey and Japan, member of the Security
-Council, the Disarmament Committee and the International Court of Justice.
-Recognized at the Milan MUN for outstanding work in the Security Council.
-Spoke in front of the General Assembly at every conference.}
-\end{cvcol}
-
-\section*{Skills}
-\begin{cvcol}
-\cvpar[Languages]{Mother tongue English. Nearly native French.}
-\cvskip
-\cvpar[Programming Languages]{Fluent in Javascript and Objective-C. Can also
-write in C, Python, PHP and C++. Mild exposure to Haskell.}
-\cvskip
-\cvpar[Computer Skills]{Highly proficient in a wide variety of tools, including
-the shell, git, vim and Xcode. This document was written in vim using {\large \LaTeX}.}
-\end{cvcol}
-
+% -- Body --
+\section{Education}
+\hdr{International School of Helsinki, Finland}{2010 -- now}
+\begin{itemize}
+    \itm Currently in the 12th grade; the second year of the International
+    Baccalaureate program (IB).
+    \itm Enrolled in Mathematics Higher Level (HL), Physics HL, Psychology HL,
+    Computer Science Standard Level (SL), English (Native) SL and French (Native)
+    SL.
+    \itm Graduated each previous year with honours. Current GPA: 6.2 out of 7.
+\end{itemize}
+\bigskip
+\hdr{West Oak Public School, Canada}{2006 -- 2010}
+\begin{itemize}
+    \itm Graduated each year with honours.
+    \itm Valedictorian of the graduating class.
+    \itm Received award of excellence in the French language.
+    \itm GPA of A on a scale of A to D.
+\end{itemize}
+\section{Work Experience}
+\hdr{iMenu360 Inc.}{2010 -- 2011}\\[2mm]
+\emph{\large iOS Software Engineer}
+\begin{itemize}
+    \itm Planned, designed and wrote a real-time issue tracker for
+    iMenu360.
+    \itm Focused on robustness and performance.
+    \itm Application is still used in production today.
+\end{itemize}
+\section{Achievements}
+\hdr{Student Government}{}
+\begin{itemize}
+    \itm Elected vice-president of the High School Student Council.
+    \itm Served the Council in various capacities for over 3 years.
+    \itm Responsible for organizing and running large school events,
+    such as dances, cultural events and assemblies.
+\end{itemize}
+\bigskip
+\hdr{Volleyball}{}
+\begin{itemize}
+    \itm Won Bronze at the CEESA High School Boys Volleyball
+    Tournament 2011, in Helsinki.
+    \itm Played on the first line, as the team setter.
+\end{itemize}
+\bigskip
+\hdr{Model United Nations}{}
+\begin{itemize}
+    \itm Participated in 5 MUN conferences.
+    \itm Held various high profile positions; was head ambassador of
+    Turkey and Japan, a member of the Security Council and the
+    International Court of Justice.
+    \itm Recognized at Milan MUN for outstanding work in the Security
+    Council.
+    \itm Spoke in front of the General Assembly at every conference.
+\end{itemize}
+\section{Interests}
+\hdr{Mathematics and Theoretical Computer Science}{}
+\begin{itemize}
+    \itm Particularly interested in cryptography, number theory,
+    abstract algebra and algorithms.
+    \itm Completed the Cryptography I course on Coursera, taught by Dan
+    Boneh of Stanford University.
+    \itm Pioneered the computer science course at the International School
+    of Helsinki. As part of the course, wrote and taught several lessons
+    on programming in Javascript (available at \url{http://git.io/nk1UMw}).
+    \itm In 10th grade, wrote a short dissertation on modern cryptographic
+    techniques from a mathematical perspective (available at
+    \url{http://git.io/iAFH6A}).
+    \itm Currently writing an extended essay on the relationship between
+    matroids and algorithmic solutions to combinatorial optimization
+    problems.
+\end{itemize}
+\bigskip
+\hdr{Open Source Software}{}
+\begin{itemize}
+    \itm Regularly work on open source software projects in leisure
+    time.
+    \itm Maintainer of two non-trivial open source projects.
+    \itm All code freely available under the MIT licence at
+    \url{https://github.com/siddmahen}.
+\end{itemize}
+\bigskip
+\hdr{Music}{}
+\begin{itemize}
+    \itm Played 1st flute in the West Oak School Band for 3 years.
+    \itm Invited to play in the Halton Intermediate Woodwinds Band on
+    recommendation of band conductor.
+    \itm Continued to play the flute in Helsinki, most recently playing the
+    solo flute score for a school production of {\it The Wizard of Oz} in
+    2011.
+\end{itemize}
 \end{document}
-
